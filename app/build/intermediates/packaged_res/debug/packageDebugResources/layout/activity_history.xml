@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA">
+
+    <LinearLayout android:id="@+id/headerHistory"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:background="#FFFFFF"
+        android:paddingHorizontal="20dp" android:paddingVertical="16dp"
+        android:paddingTop="52dp">
+
+        <ImageButton android:id="@+id/btnBackHistory"
+            android:layout_width="36dp" android:layout_height="36dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:background="@drawable/input_light" android:padding="8dp"/>
+
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Buyruqlar tarixi"
+            android:textColor="#1A1A2E" android:textSize="18sp"
+            android:textStyle="bold" android:layout_marginStart="12dp"/>
+
+        <Button android:id="@+id/btnClearHistory"
+            android:layout_width="wrap_content" android:layout_height="36dp"
+            android:text="Tozala" android:background="@drawable/card_red_light"
+            android:textColor="#FF4B4B" android:textSize="12sp"
+            android:paddingHorizontal="12dp" android:stateListAnimator="@null"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvHistoryEmpty"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Hali buyruq kelmagan 📭"
+        android:textColor="#AAAAAA" android:textSize="16sp" android:visibility="gone"/>
+
+    <ListView android:id="@+id/lvHistory"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_below="@id/headerHistory"
+        android:paddingHorizontal="16dp" android:paddingTop="8dp"
+        android:paddingBottom="16dp" android:divider="@null"
+        android:clipToPadding="false"/>
+</RelativeLayout>

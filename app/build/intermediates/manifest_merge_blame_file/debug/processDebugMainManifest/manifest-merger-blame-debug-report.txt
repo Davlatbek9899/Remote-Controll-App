@@ -1,0 +1,434 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.remotecontrol"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="36" />
+10
+11    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+11-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:5:5-70
+11-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:5:22-67
+12    <uses-permission android:name="android.permission.READ_SMS" />
+12-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:6:5-67
+12-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.SEND_SMS" />
+13-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:7:5-67
+13-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:7:22-64
+14    <uses-permission android:name="android.permission.CALL_PHONE" />
+14-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:8:5-69
+14-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:8:22-66
+15    <uses-permission android:name="android.permission.MANAGE_OWN_CALLS" />
+15-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:9:5-75
+15-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:9:22-72
+16    <uses-permission android:name="android.permission.CAMERA" />
+16-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:10:5-65
+16-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:10:22-62
+17
+18    <uses-feature
+18-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:11:5-85
+19        android:name="android.hardware.camera2"
+19-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:11:19-58
+20        android:required="true" />
+20-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:11:59-82
+21
+22    <uses-permission android:name="android.permission.FLASHLIGHT" />
+22-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:12:5-69
+22-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:12:22-66
+23    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+23-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:13:5-79
+23-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:13:22-76
+24    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+24-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:14:5-81
+24-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:14:22-78
+25    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+25-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:15:5-80
+25-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:15:22-77
+26    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+26-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:16:5-71
+26-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:16:22-68
+27    <uses-permission android:name="android.permission.READ_CONTACTS" />
+27-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:17:5-72
+27-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:17:22-69
+28    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+28-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:18:5-72
+28-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:18:22-69
+29    <uses-permission android:name="android.permission.VIBRATE" />
+29-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:19:5-66
+29-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:19:22-63
+30    <uses-permission android:name="android.permission.WAKE_LOCK" />
+30-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:20:5-68
+30-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:20:22-65
+31    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+31-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:21:5-76
+31-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:21:22-73
+32    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+32-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:22:5-76
+32-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:22:22-73
+33    <uses-permission android:name="android.permission.BLUETOOTH" />
+33-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:23:5-68
+33-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:23:22-65
+34    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+34-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:24:5-74
+34-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:24:22-71
+35    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+35-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:25:5-76
+35-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:25:22-73
+36    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+36-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:26:5-75
+36-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:26:22-72
+37    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+37-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:27:5-77
+37-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:27:22-74
+38    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+38-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:28:5-77
+38-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:28:22-74
+39    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+39-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:29:5-89
+39-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:29:22-86
+40    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+40-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:30:5-81
+40-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:30:22-78
+41    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+41-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:31:5-81
+41-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:31:22-78
+42    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+42-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:32:5-80
+42-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:32:22-77
+43    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+43-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:33:5-77
+43-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:33:22-74
+44    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+44-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:34:5-94
+44-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:34:22-91
+45    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+45-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:35:5-78
+45-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:35:22-75
+46
+47    <permission
+47-->[androidx.core:core:1.18.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6e54e459319ac3b09bef47844ecae3ce/transformed/core-1.18.0/AndroidManifest.xml:22:5-24:47
+48        android:name="com.example.remotecontrol.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+48-->[androidx.core:core:1.18.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6e54e459319ac3b09bef47844ecae3ce/transformed/core-1.18.0/AndroidManifest.xml:23:9-81
+49        android:protectionLevel="signature" />
+49-->[androidx.core:core:1.18.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6e54e459319ac3b09bef47844ecae3ce/transformed/core-1.18.0/AndroidManifest.xml:24:9-44
+50
+51    <uses-permission android:name="com.example.remotecontrol.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+51-->[androidx.core:core:1.18.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6e54e459319ac3b09bef47844ecae3ce/transformed/core-1.18.0/AndroidManifest.xml:26:5-97
+51-->[androidx.core:core:1.18.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6e54e459319ac3b09bef47844ecae3ce/transformed/core-1.18.0/AndroidManifest.xml:26:22-94
+52
+53    <application
+53-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:37:5-126:19
+54        android:allowBackup="true"
+54-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:38:9-35
+55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+55-->[androidx.core:core:1.18.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6e54e459319ac3b09bef47844ecae3ce/transformed/core-1.18.0/AndroidManifest.xml:28:18-86
+56        android:debuggable="true"
+57        android:extractNativeLibs="false"
+58        android:icon="@mipmap/ic_launcher"
+58-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:39:9-43
+59        android:label="Remote Control"
+59-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:41:9-39
+60        android:roundIcon="@mipmap/ic_launcher_round"
+60-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:40:9-54
+61        android:theme="@style/Theme.RemoteControl" >
+61-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:42:9-51
+62        <activity
+62-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:44:9-49:43
+63            android:name="com.example.remotecontrol.CameraActivity"
+63-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:45:13-43
+64            android:exported="false"
+64-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:46:13-37
+65            android:showOnLockScreen="true"
+65-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:48:13-44
+66            android:theme="@style/Theme.RemoteControl"
+66-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:47:13-55
+67            android:turnScreenOn="true" />
+67-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:49:13-40
+68        <activity
+68-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:51:9-54:75
+69            android:name="com.example.remotecontrol.ScreenshotActivity"
+69-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:52:13-47
+70            android:exported="false"
+70-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:53:13-37
+71            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+71-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:54:13-72
+72        <activity
+72-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:56:9-58:51
+73            android:name="com.example.remotecontrol.SleepTimerActivity"
+73-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:56:19-53
+74            android:exported="false"
+74-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:57:13-37
+75            android:screenOrientation="portrait" />
+75-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:58:13-49
+76        <activity
+76-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:59:9-77
+77            android:name="com.example.remotecontrol.HistoryActivity"
+77-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:59:19-50
+78            android:exported="false" />
+78-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:59:51-75
+79        <activity
+79-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:60:9-78
+80            android:name="com.example.remotecontrol.CommandsActivity"
+80-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:60:19-51
+81            android:exported="false" />
+81-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:60:52-76
+82        <activity
+82-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:61:9-62:75
+83            android:name="com.example.remotecontrol.CallActivity"
+83-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:61:19-47
+84            android:exported="false"
+84-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:61:48-72
+85            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+85-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:62:13-72
+86        <activity
+86-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:64:9-69:20
+87            android:name="com.example.remotecontrol.MainActivity"
+87-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:64:19-47
+88            android:exported="true" >
+88-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:64:48-71
+89            <intent-filter>
+89-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:65:13-68:29
+90                <action android:name="android.intent.action.MAIN" />
+90-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:66:17-69
+90-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:66:25-66
+91
+92                <category android:name="android.intent.category.LAUNCHER" />
+92-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:67:17-77
+92-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:67:27-74
+93            </intent-filter>
+94        </activity>
+95
+96        <receiver
+96-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:71:9-75:20
+97            android:name="com.example.remotecontrol.SmsReceiver"
+97-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:71:19-46
+98            android:enabled="true"
+98-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:71:47-69
+99            android:exported="true" >
+99-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:71:70-93
+100            <intent-filter android:priority="999" >
+100-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:72:13-74:29
+100-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:72:28-50
+101                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+101-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:73:17-82
+101-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:73:25-79
+102            </intent-filter>
+103        </receiver>
+104        <receiver
+104-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:77:9-82:20
+105            android:name="com.example.remotecontrol.BootReceiver"
+105-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:77:19-47
+106            android:enabled="true"
+106-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:77:48-70
+107            android:exported="true" >
+107-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:77:71-94
+108            <intent-filter>
+108-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:78:13-81:29
+109                <action android:name="android.intent.action.BOOT_COMPLETED" />
+109-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:79:17-79
+109-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:79:25-76
+110                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+110-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:80:17-82
+110-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:80:25-79
+111            </intent-filter>
+112        </receiver>
+113
+114        <service
+114-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:84:9-88:19
+115            android:name="com.example.remotecontrol.RemoteControlService"
+115-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:84:18-54
+116            android:enabled="true"
+116-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:84:55-77
+117            android:exported="false"
+117-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:85:13-37
+118            android:foregroundServiceType="specialUse" >
+118-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:85:38-80
+119            <property
+119-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:86:13-87:50
+120                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+120-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:86:23-82
+121                android:value="remote_control" />
+121-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:87:17-47
+122        </service>
+123
+124        <receiver
+124-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:90:9-100:20
+125            android:name="com.example.remotecontrol.DeviceAdminReceiver"
+125-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:91:13-48
+126            android:exported="true"
+126-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:92:13-36
+127            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+127-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:93:13-70
+128            <meta-data
+128-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:94:13-96:56
+129                android:name="android.app.device_admin"
+129-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:95:17-56
+130                android:resource="@xml/device_admin" />
+130-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:96:17-53
+131
+132            <intent-filter>
+132-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:97:13-99:29
+133                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+133-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:98:17-82
+133-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:98:25-79
+134            </intent-filter>
+135        </receiver>
+136
+137        <service
+137-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:102:9-103:62
+138            android:name="com.example.remotecontrol.BatteryMonitorService"
+138-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:102:18-55
+139            android:enabled="true"
+139-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:103:13-35
+140            android:exported="false" />
+140-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:103:36-60
+141
+142        <receiver
+142-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:105:9-114:20
+143            android:name="com.example.remotecontrol.BatteryAlertReceiver"
+143-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:105:19-55
+144            android:enabled="true"
+144-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:106:13-35
+145            android:exported="false" >
+145-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:106:36-60
+146            <intent-filter>
+146-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:107:13-113:29
+147                <action android:name="android.intent.action.BATTERY_LOW" />
+147-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:108:17-75
+147-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:108:25-73
+148                <action android:name="android.intent.action.BATTERY_OKAY" />
+148-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:109:17-76
+148-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:109:25-74
+149                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+149-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:110:17-86
+149-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:110:25-84
+150                <action android:name="com.example.remotecontrol.BATTERY_FULL" />
+150-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:111:17-80
+150-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:111:25-78
+151                <action android:name="com.example.remotecontrol.BATTERY_LOW_CUSTOM" />
+151-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:112:17-86
+151-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:112:25-84
+152            </intent-filter>
+153        </receiver>
+154
+155        <service
+155-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:116:9-100
+156            android:name="com.example.remotecontrol.LocationService"
+156-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:116:18-49
+157            android:enabled="true"
+157-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:116:50-72
+158            android:exported="false" />
+158-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:116:73-97
+159        <service
+159-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:9-98
+160            android:name="com.example.remotecontrol.CameraService"
+160-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:18-47
+161            android:enabled="true"
+161-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:48-70
+162            android:exported="false" />
+162-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:71-95
+163        <service
+163-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:118:9-122:63
+164            android:name="com.example.remotecontrol.ScreenshotService"
+164-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:119:13-46
+165            android:enabled="true"
+165-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:120:13-35
+166            android:exported="false"
+166-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:121:13-37
+167            android:foregroundServiceType="mediaProjection" />
+167-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:122:13-60
+168        <service
+168-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:124:9-103
+169            android:name="com.example.remotecontrol.AudioRecordService"
+169-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:124:18-52
+170            android:enabled="true"
+170-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:124:53-75
+171            android:exported="false" />
+171-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:124:76-100
+172
+173        <activity
+173-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+174            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+174-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+175            android:exported="false"
+175-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+176            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+176-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+177
+178        <meta-data
+178-->[com.google.android.gms:play-services-basement:18.4.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/cb38f60cb445c6fd20ead385cd9d2324/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+179            android:name="com.google.android.gms.version"
+179-->[com.google.android.gms:play-services-basement:18.4.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/cb38f60cb445c6fd20ead385cd9d2324/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+180            android:value="@integer/google_play_services_version" />
+180-->[com.google.android.gms:play-services-basement:18.4.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/cb38f60cb445c6fd20ead385cd9d2324/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+181
+182        <provider
+182-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+183            android:name="androidx.startup.InitializationProvider"
+183-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
+184            android:authorities="com.example.remotecontrol.androidx-startup"
+184-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
+185            android:exported="false" >
+185-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
+186            <meta-data
+186-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+187                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+187-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+188                android:value="androidx.startup" />
+188-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+189            <meta-data
+189-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6fd0c5b664ce0e4093bdbd312f95dddb/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+190                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+190-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6fd0c5b664ce0e4093bdbd312f95dddb/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+191                android:value="androidx.startup" />
+191-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6fd0c5b664ce0e4093bdbd312f95dddb/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+192            <meta-data
+192-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+193                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+193-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+194                android:value="androidx.startup" />
+194-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+195        </provider>
+196
+197        <receiver
+197-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+198            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+198-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+199            android:directBootAware="false"
+199-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+200            android:enabled="true"
+200-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+201            android:exported="true"
+201-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+202            android:permission="android.permission.DUMP" >
+202-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+203            <intent-filter>
+203-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+204                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+204-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+204-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+205            </intent-filter>
+206            <intent-filter>
+206-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+207                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+207-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+207-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+208            </intent-filter>
+209            <intent-filter>
+209-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+210                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+210-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+210-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+211            </intent-filter>
+212            <intent-filter>
+212-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+213                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+213-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+213-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+214            </intent-filter>
+215        </receiver>
+216    </application>
+217
+218</manifest>

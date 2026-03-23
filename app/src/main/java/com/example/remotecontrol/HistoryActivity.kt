@@ -1,0 +1,53 @@
+package com.example.remotecontrol
+
+import android.graphics.Color
+import android.os.Bundle
+import android.view.*
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+
+class HistoryActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_history)
+        // Kirish animatsiyasi
+        val header = findViewById<android.widget.LinearLayout>(R.id.headerHistory)
+        header.startAnimation(android.view.animation.AnimationUtils.loadAnimation(this, R.anim.slide_down))
+
+        findViewById<ImageButton>(R.id.btnBackHistory).setOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.fade_in, R.anim.slide_left)
+        }
+        findViewById<Button>(R.id.btnClearHistory).setOnClickListener {
+            CommandLogger.clearLog(this)
+            refreshList()
+            Toast.makeText(this, "Tarix tozalandi", Toast.LENGTH_SHORT).show()
+        }
+        refreshList()
+    }
+
+    private fun refreshList() {
+        val listView = findViewById<ListView>(R.id.lvHistory)
+        val tvEmpty = findViewById<TextView>(R.id.tvHistoryEmpty)
+        val logs = CommandLogger.getLogs(this)
+        if (logs.isEmpty()) {
+            tvEmpty.visibility = View.VISIBLE
+            listView.visibility = View.GONE
+            return
+        }
+        tvEmpty.visibility = View.GONE
+        listView.visibility = View.VISIBLE
+        val adapter = object : ArrayAdapter<CommandLogger.LogEntry>(this, 0, logs.reversed()) {
+            override fun getView(pos: Int, convertView: View?, parent: ViewGroup): View {
+                val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.item_history, parent, false)
+                val entry = getItem(pos)!!
+                view.findViewById<TextView>(R.id.tvLogSender).text = entry.sender
+                view.findViewById<TextView>(R.id.tvLogCommand).text = entry.command
+                view.findViewById<TextView>(R.id.tvLogTime).text = entry.time
+                return view
+            }
+        }
+        listView.adapter = adapter
+    }
+}
