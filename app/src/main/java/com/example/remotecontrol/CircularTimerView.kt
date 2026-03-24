@@ -15,6 +15,7 @@ class CircularTimerView @JvmOverloads constructor(
     private var draggable = true
     private var onAngleChange: ((Float) -> Unit)? = null
     private var thumbAngle = 0f
+    private var lastAngle = -1f  // oldingi burchakni eslab qolamiz
 
     private val trackPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.STROKE
@@ -26,24 +27,12 @@ class CircularTimerView @JvmOverloads constructor(
     private val progressPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.STROKE
         strokeWidth = 12f
-        strokeCap = Paint.Cap.ROUND
+        strokeCap = Paint.Cap.BUTT
     }
 
     private val thumbPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.FILL
         color = Color.parseColor("#1B8EF8")
-    }
-
-    private val shader by lazy {
-        SweepGradient(
-            width / 2f, height / 2f,
-            intArrayOf(
-                Color.parseColor("#33FF33"),
-                Color.parseColor("#CCFF00"),
-                Color.parseColor("#CCFF00")
-            ),
-            floatArrayOf(0f, 0.6f, 1f)
-        )
     }
 
     override fun onDraw(canvas: Canvas) {
@@ -52,29 +41,19 @@ class CircularTimerView @JvmOverloads constructor(
         val radius = minOf(cx, cy) * 0.82f
         val rect = RectF(cx - radius, cy - radius, cx + radius, cy + radius)
 
-        // Track (arka fon)
         canvas.drawCircle(cx, cy, radius, trackPaint)
 
-        // Progress arc — boshi xira, oxiri to'q
         val sweepAngle = progress * 360f
-        
-        // Gradient burchagi: arc boshidan (startAngle) oxirigacha
         val startAngle = -90f
-        val endAngleDeg = startAngle + sweepAngle
-        
-        // SweepGradient doim 3-soat pozitsiyasidan boshlanadi (0 daraja)
-        // Shuning uchun offset hisoblab gradient qo'yamiz
-        val startRad = Math.toRadians(startAngle.toDouble())
-        val endRad = Math.toRadians(endAngleDeg.toDouble())
-        
+
         val gradientMatrix = Matrix()
         gradientMatrix.setRotate(startAngle, cx, cy)
-        
+
         val gradient = SweepGradient(cx, cy,
             intArrayOf(
-                Color.parseColor("#00A8D8"),  // boshi — xira
-                Color.parseColor("#1B8EF8"),  // o'rta
-                Color.parseColor("#0A5FCC")   // oxiri — to'q
+                Color.parseColor("#00A8D8"),
+                Color.parseColor("#1B8EF8"),
+                Color.parseColor("#0A5FCC")
             ),
             floatArrayOf(0f, 0.5f, 1f)
         )
@@ -82,15 +61,12 @@ class CircularTimerView @JvmOverloads constructor(
         progressPaint.shader = gradient
         canvas.drawArc(rect, startAngle, sweepAngle, false, progressPaint)
 
-        // Thumb (sariq doira)
         thumbAngle = -90f + sweepAngle
         val thumbX = cx + radius * cos(Math.toRadians(thumbAngle.toDouble())).toFloat()
         val thumbY = cy + radius * sin(Math.toRadians(thumbAngle.toDouble())).toFloat()
 
-        // Tashqi ring
         thumbPaint.color = Color.parseColor("#881B8EF8")
         canvas.drawCircle(thumbX, thumbY, 22f, thumbPaint)
-        // Ichki doira
         thumbPaint.color = Color.parseColor("#1B8EF8")
         canvas.drawCircle(thumbX, thumbY, 14f, thumbPaint)
     }
@@ -103,10 +79,35 @@ class CircularTimerView @JvmOverloads constructor(
         val dy = event.y - cy
 
         when (event.action) {
-            MotionEvent.ACTION_DOWN, MotionEvent.ACTION_MOVE -> {
+            MotionEvent.ACTION_DOWN -> {
+                // Bosishda hozirgi burchakni eslab qolamiz
                 var angle = Math.toDegrees(atan2(dy.toDouble(), dx.toDouble())).toFloat() + 90f
                 if (angle < 0) angle += 360f
                 if (angle > 360f) angle -= 360f
+                lastAngle = angle
+                return true
+            }
+            MotionEvent.ACTION_MOVE -> {
+                var angle = Math.toDegrees(atan2(dy.toDouble(), dx.toDouble())).toFloat() + 90f
+                if (angle < 0) angle += 360f
+                if (angle > 360f) angle -= 360f
+
+                // Yuqori chegaradan (360->0) o'tishni bloklash
+                // Agar oldingi burchak 270+ va yangi 90- bo'lsa — bu sakrash
+                if (lastAngle > 270f && angle < 90f) {
+                    // Maksimumga qo'yib qo'yamiz
+                    angle = 360f
+                }
+                // Pastki chegaradan (0->360) o'tishni bloklash
+                if (lastAngle < 90f && angle > 270f) {
+                    // Minimumga qo'yib qo'yamiz
+                    angle = 0f
+                }
+
+                // Minimum: 4 daraja (~1 daqiqa), Maksimum: 360 daraja (90 daqiqa)
+                angle = angle.coerceIn(0f, 360f)
+
+                lastAngle = angle
                 progress = angle / 360f
                 onAngleChange?.invoke(angle)
                 invalidate()

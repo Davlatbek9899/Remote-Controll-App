@@ -12,12 +12,12 @@
         "source": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-main-39:/drawable/btn_red.xml"
     },
     {
-        "merged": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-debug-37:/drawable_glass_pill_green.xml.flat",
-        "source": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-main-39:/drawable/glass_pill_green.xml"
-    },
-    {
         "merged": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-debug-37:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-main-39:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-debug-37:/drawable_glass_pill_green.xml.flat",
+        "source": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-main-39:/drawable/glass_pill_green.xml"
     },
     {
         "merged": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-debug-37:/drawable_bg_circle_blue.xml.flat",
@@ -42,6 +42,10 @@
     {
         "merged": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-debug-37:/drawable_card_red_light.xml.flat",
         "source": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-main-39:/drawable/card_red_light.xml"
+    },
+    {
+        "merged": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-debug-37:/drawable_pulse_dot_blue.xml.flat",
+        "source": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-main-39:/drawable/pulse_dot_blue.xml"
     },
     {
         "merged": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-debug-37:/drawable_glass_btn_pink.xml.flat",
@@ -74,10 +78,6 @@
     {
         "merged": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-debug-37:/anim_slide_up.xml.flat",
         "source": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-main-39:/anim/slide_up.xml"
-    },
-    {
-        "merged": "com.example.remotecontrol.app-debug-37:/layout_activity_main.xml.flat",
-        "source": "com.example.remotecontrol.app-main-39:/layout/activity_main.xml"
     },
     {
         "merged": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-debug-37:/drawable_loading_dots.xml.flat",
@@ -226,6 +226,10 @@
     {
         "merged": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-debug-37:/drawable_glass_btn_blue.xml.flat",
         "source": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-main-39:/drawable/glass_btn_blue.xml"
+    },
+    {
+        "merged": "com.example.remotecontrol.app-debug-37:/layout_dialog_password.xml.flat",
+        "source": "com.example.remotecontrol.app-main-39:/layout/dialog_password.xml"
     },
     {
         "merged": "/Users/davlatarslonov/.gradle/daemon/8.11.1/com.example.remotecontrol.app-debug-37:/drawable_card_green_light.xml.flat",

@@ -11,8 +11,20 @@ class HistoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history)
-        // Kirish animatsiyasi
+
+        // Status bar balandligini dinamik olish
         val header = findViewById<android.widget.LinearLayout>(R.id.headerHistory)
+        androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener(header) { view, insets ->
+            val statusBar = insets.getInsets(androidx.core.view.WindowInsetsCompat.Type.statusBars()).top
+            val dp16 = (16 * resources.displayMetrics.density).toInt()
+            view.setPadding(
+                view.paddingLeft,
+                statusBar + dp16,
+                view.paddingRight,
+                view.paddingBottom
+            )
+            insets
+        }
         header.startAnimation(android.view.animation.AnimationUtils.loadAnimation(this, R.anim.slide_down))
 
         findViewById<ImageButton>(R.id.btnBackHistory).setOnClickListener {

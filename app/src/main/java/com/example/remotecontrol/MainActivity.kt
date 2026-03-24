@@ -216,6 +216,7 @@ class MainActivity : AppCompatActivity() {
     private var sleepCountdown: Runnable? = null
     private var sleepRunning = false
     private var sleepMinutes = 30
+    private var sleepRemaining = 0
 
     private fun showSleepTimerDialog() {
         val dialog = android.app.Dialog(this)
@@ -230,31 +231,56 @@ class MainActivity : AppCompatActivity() {
         val tvSub = dialog.findViewById<TextView>(R.id.tvTimerSub)
         val btnStartStop = dialog.findViewById<Button>(R.id.btnTimerStart)
         val btnClose = dialog.findViewById<android.widget.ImageButton>(R.id.btnCloseTimer)
+        val pulseDot = dialog.findViewById<android.view.View>(R.id.viewPulseDot)
 
-        // Dialog ochilganda mavjud holatni tiklash
-        if (sleepRunning) {
-            btnStartStop.text = "TO'XTATISH"
-            btnStartStop.setBackgroundResource(R.drawable.btn_red)
-            tvSub.text = "qoldi"
-            timerView.setDraggable(false)
-            // Joriy qolgan vaqtni ko'rsatish — countdown runnable ni dialog ga ulash
-            sleepDialogMins = tvMins
-            sleepDialogSub = tvSub
-            sleepDialogTimer = timerView
-        } else {
-            timerView.setProgress(sleepMinutes / 90f)
-            tvMins.text = sleepMinutes.toString()
-            tvSub.text = "daqiqa"
-        }
+        // Dialog ochilishi bilanoq referenslarni yangilash
         sleepDialogMins = tvMins
         sleepDialogSub = tvSub
         sleepDialogTimer = timerView
 
+        // Joriy holatni darhol ko'rsatish
+        if (sleepRunning) {
+            val m = sleepRemaining / 60
+            val s = sleepRemaining % 60
+            tvMins.text = String.format("%02d:%02d", m, s)
+            tvSub.text = "qoldi"
+            val prog = sleepRemaining.toFloat() / (sleepMinutes * 60f)
+            timerView.setProgress(prog)
+            timerView.setDraggable(false)
+            timerView.visibility = android.view.View.INVISIBLE
+            btnStartStop.text = "TO'XTATISH"
+            btnStartStop.setBackgroundResource(R.drawable.btn_red)
+            // Pulse nuqtani yoqish
+            pulseDot.visibility = android.view.View.VISIBLE
+            val pulseAnim = android.animation.ObjectAnimator.ofFloat(pulseDot, "alpha", 1f, 0f).apply {
+                duration = 900
+                repeatCount = android.animation.ValueAnimator.INFINITE
+                repeatMode = android.animation.ValueAnimator.REVERSE
+                interpolator = android.view.animation.AccelerateDecelerateInterpolator()
+            }
+            pulseAnim.start()
+            pulseDot.tag = pulseAnim
+        } else {
+            timerView.setProgress(sleepMinutes / 90f)
+            tvMins.text = sleepMinutes.toString()
+            tvSub.text = "daqiqa"
+            btnStartStop.text = "BOSHLASH"
+            btnStartStop.setBackgroundResource(R.drawable.btn_blue)
+            timerView.setDraggable(true)
+        }
+
         timerView.setOnAngleChangeListener { angle ->
             if (!sleepRunning) {
-                sleepMinutes = ((angle / 360f) * 90).toInt().coerceIn(1, 90)
-                tvMins.text = sleepMinutes.toString()
+                sleepMinutes = ((angle / 360f) * 90).toInt().coerceIn(0, 90)
+                tvMins.text = String.format("%02d:00", sleepMinutes)
                 tvSub.text = "daqiqa"
+                if (sleepMinutes == 0) {
+                    btnStartStop.isEnabled = false
+                    btnStartStop.alpha = 0.4f
+                } else {
+                    btnStartStop.isEnabled = true
+                    btnStartStop.alpha = 1f
+                }
             }
         }
 
@@ -263,15 +289,17 @@ class MainActivity : AppCompatActivity() {
                 // To'xtatish
                 sleepRunning = false
                 sleepCountdown?.let { r -> sleepTimerHandler.removeCallbacks(r) }
+                sleepRemaining = 0
+                // Pulse nuqtani o'chirish
+                (pulseDot.tag as? android.animation.ObjectAnimator)?.cancel()
+                pulseDot.visibility = android.view.View.GONE
                 btnStartStop.text = "BOSHLASH"
                 btnStartStop.setBackgroundResource(R.drawable.btn_blue)
-                tvMins.text = sleepMinutes.toString()
+                tvMins.text = String.format("%02d:00", sleepMinutes)
                 tvSub.text = "daqiqa"
                 timerView.setProgress(sleepMinutes / 90f)
                 timerView.setDraggable(true)
-                sleepDialogMins = tvMins
-                sleepDialogSub = tvSub
-                sleepDialogTimer = timerView
+                timerView.visibility = android.view.View.VISIBLE
                 // Card ni qaytarish
                 findViewById<TextView>(R.id.tvSleepStatus).text = "Sozlash"
                 findViewById<TextView>(R.id.tvSleepStatus).setTextColor(
@@ -279,10 +307,21 @@ class MainActivity : AppCompatActivity() {
             } else {
                 // Boshlash
                 sleepRunning = true
-                var remaining = sleepMinutes * 60
+                sleepRemaining = sleepMinutes * 60
                 timerView.setDraggable(false)
+                timerView.visibility = android.view.View.INVISIBLE
                 btnStartStop.text = "TO'XTATISH"
                 btnStartStop.setBackgroundResource(R.drawable.btn_red)
+                // Pulse nuqtani yoqish
+                pulseDot.visibility = android.view.View.VISIBLE
+                val pulseAnim = android.animation.ObjectAnimator.ofFloat(pulseDot, "alpha", 1f, 0f).apply {
+                    duration = 900
+                    repeatCount = android.animation.ValueAnimator.INFINITE
+                    repeatMode = android.animation.ValueAnimator.REVERSE
+                    interpolator = android.view.animation.AccelerateDecelerateInterpolator()
+                }
+                pulseAnim.start()
+                pulseDot.tag = pulseAnim
 
                 // Card da "Timer ketmoqda" ko'rsatish
                 findViewById<TextView>(R.id.tvSleepStatus).text = "Timer ketmoqda"
@@ -291,7 +330,7 @@ class MainActivity : AppCompatActivity() {
 
                 sleepCountdown = object : Runnable {
                     override fun run() {
-                        if (remaining <= 0) {
+                        if (sleepRemaining <= 0) {
                             // Musiqani to'xtatish
                             try {
                                 val audio = getSystemService(AUDIO_SERVICE) as android.media.AudioManager
@@ -301,20 +340,30 @@ class MainActivity : AppCompatActivity() {
                                 })
                             } catch (e: Exception) {}
                             sleepRunning = false
-                            tvMins.text = "00"
-                            tvSub.text = "taymer tugadi"
+                            sleepRemaining = 0
+                            sleepMinutes = 30
+                            sleepDialogMins?.text = String.format("%02d:00", sleepMinutes)
+                            sleepDialogSub?.text = "daqiqa"
+                            sleepDialogTimer?.setProgress(sleepMinutes / 90f)
+                            sleepDialogTimer?.setDraggable(true)
+                            sleepDialogTimer?.visibility = android.view.View.VISIBLE
+                            // Tugmani BOSHLASH ga qaytarish
                             btnStartStop.text = "BOSHLASH"
                             btnStartStop.setBackgroundResource(R.drawable.btn_blue)
-                            timerView.setDraggable(true)
-                            timerView.setProgress(0f)
+                            // Pulse nuqtani o'chirish
+                            (pulseDot.tag as? android.animation.ObjectAnimator)?.cancel()
+                            pulseDot.visibility = android.view.View.GONE
                             Toast.makeText(this@MainActivity, "🎵 Musiqa to'xtatildi!", Toast.LENGTH_LONG).show()
+                            findViewById<TextView>(R.id.tvSleepStatus).text = "Sozlash"
+                            findViewById<TextView>(R.id.tvSleepStatus).setTextColor(
+                                android.graphics.Color.parseColor("#1B8EF8"))
                             return
                         }
-                        remaining--
-                        val m = remaining / 60
-                        val s = remaining % 60
+                        sleepRemaining--
+                        val m = sleepRemaining / 60
+                        val s = sleepRemaining % 60
                         val timeStr = String.format("%02d:%02d", m, s)
-                        val prog = remaining.toFloat() / (sleepMinutes * 60f)
+                        val prog = sleepRemaining.toFloat() / (sleepMinutes * 60f)
                         // Dialog ochiq bo'lsa yangilash
                         sleepDialogMins?.text = timeStr
                         sleepDialogSub?.text = "qoldi"
@@ -326,9 +375,18 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // X tugmasi — faqat yopadi, timer davom etadi
+        // X tugmasi — faqat yopadi, referenslarni tozalaydi
         btnClose.setOnClickListener {
+            sleepDialogMins = null
+            sleepDialogSub = null
+            sleepDialogTimer = null
             dialog.dismiss()
+        }
+
+        dialog.setOnDismissListener {
+            sleepDialogMins = null
+            sleepDialogSub = null
+            sleepDialogTimer = null
         }
 
         dialog.show()
@@ -496,7 +554,7 @@ class MainActivity : AppCompatActivity() {
         // 1.25f — ramkadan chiqmasin, alpha esa oldin yo'qoladi
         val scaleX = ObjectAnimator.ofFloat(ring, "scaleX", 1f, 1.25f).apply { duration = 3500 }
         val scaleY = ObjectAnimator.ofFloat(ring, "scaleY", 1f, 1.25f).apply { duration = 3500 }
-        val alpha = ObjectAnimator.ofFloat(ring, "alpha", 0.6f, 0f).apply { duration = 2500 }
+        val alpha = ObjectAnimator.ofFloat(ring, "alpha", 0.6f, 0f).apply { duration = 8000 }
 
         pulseAnimator = android.animation.AnimatorSet().apply {
             playTogether(scaleX, scaleY, alpha)

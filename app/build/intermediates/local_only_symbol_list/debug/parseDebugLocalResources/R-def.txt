@@ -39,6 +39,7 @@ drawable nav_bar_bg
 drawable nav_item_selected
 drawable power_btn_green
 drawable power_btn_red
+drawable pulse_dot_blue
 drawable pulse_ring_green
 drawable pulse_ring_red
 id bottomNav
@@ -112,6 +113,7 @@ id tvSlot3
 id tvThresholdValue
 id tvTimerMins
 id tvTimerSub
+id viewPulseDot
 id viewPulseRing
 layout activity_commands
 layout activity_history

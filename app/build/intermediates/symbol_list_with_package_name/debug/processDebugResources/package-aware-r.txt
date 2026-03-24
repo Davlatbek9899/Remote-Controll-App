@@ -3710,6 +3710,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable power_btn_green
 drawable power_btn_red
+drawable pulse_dot_blue
 drawable pulse_ring_green
 drawable pulse_ring_red
 drawable test_level_drawable
@@ -4287,6 +4288,7 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
+id viewPulseDot
 id viewPulseRing
 id view_offset_helper
 id view_transition
