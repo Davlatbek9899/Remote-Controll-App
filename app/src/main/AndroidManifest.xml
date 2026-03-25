@@ -100,7 +100,8 @@
         </receiver>
 
         <service android:name=".BatteryMonitorService"
-            android:enabled="true" android:exported="false"/>
+            android:enabled="true" android:exported="false"
+            android:foregroundServiceType="specialUse"/>
 
         <receiver android:name=".BatteryAlertReceiver"
             android:enabled="true" android:exported="false">

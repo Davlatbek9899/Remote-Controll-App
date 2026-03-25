@@ -119,7 +119,7 @@
 51-->[androidx.core:core:1.18.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6e54e459319ac3b09bef47844ecae3ce/transformed/core-1.18.0/AndroidManifest.xml:26:22-94
 52
 53    <application
-53-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:37:5-126:19
+53-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:37:5-127:19
 54        android:allowBackup="true"
 54-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:38:9-35
 55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -277,158 +277,160 @@
 135        </receiver>
 136
 137        <service
-137-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:102:9-103:62
+137-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:102:9-104:57
 138            android:name="com.example.remotecontrol.BatteryMonitorService"
 138-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:102:18-55
 139            android:enabled="true"
 139-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:103:13-35
-140            android:exported="false" />
+140            android:exported="false"
 140-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:103:36-60
-141
-142        <receiver
-142-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:105:9-114:20
-143            android:name="com.example.remotecontrol.BatteryAlertReceiver"
-143-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:105:19-55
-144            android:enabled="true"
-144-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:106:13-35
-145            android:exported="false" >
-145-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:106:36-60
-146            <intent-filter>
-146-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:107:13-113:29
-147                <action android:name="android.intent.action.BATTERY_LOW" />
-147-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:108:17-75
-147-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:108:25-73
-148                <action android:name="android.intent.action.BATTERY_OKAY" />
-148-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:109:17-76
-148-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:109:25-74
-149                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-149-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:110:17-86
-149-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:110:25-84
-150                <action android:name="com.example.remotecontrol.BATTERY_FULL" />
-150-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:111:17-80
-150-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:111:25-78
-151                <action android:name="com.example.remotecontrol.BATTERY_LOW_CUSTOM" />
-151-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:112:17-86
-151-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:112:25-84
-152            </intent-filter>
-153        </receiver>
-154
-155        <service
-155-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:116:9-100
-156            android:name="com.example.remotecontrol.LocationService"
-156-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:116:18-49
-157            android:enabled="true"
-157-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:116:50-72
-158            android:exported="false" />
-158-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:116:73-97
-159        <service
-159-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:9-98
-160            android:name="com.example.remotecontrol.CameraService"
-160-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:18-47
-161            android:enabled="true"
-161-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:48-70
-162            android:exported="false" />
-162-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:71-95
-163        <service
-163-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:118:9-122:63
-164            android:name="com.example.remotecontrol.ScreenshotService"
-164-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:119:13-46
-165            android:enabled="true"
-165-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:120:13-35
-166            android:exported="false"
-166-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:121:13-37
-167            android:foregroundServiceType="mediaProjection" />
-167-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:122:13-60
-168        <service
-168-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:124:9-103
-169            android:name="com.example.remotecontrol.AudioRecordService"
-169-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:124:18-52
-170            android:enabled="true"
-170-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:124:53-75
-171            android:exported="false" />
-171-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:124:76-100
-172
-173        <activity
-173-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:9-173
-174            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-174-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:19-85
-175            android:exported="false"
-175-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:146-170
-176            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-176-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:86-145
-177
-178        <meta-data
-178-->[com.google.android.gms:play-services-basement:18.4.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/cb38f60cb445c6fd20ead385cd9d2324/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
-179            android:name="com.google.android.gms.version"
-179-->[com.google.android.gms:play-services-basement:18.4.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/cb38f60cb445c6fd20ead385cd9d2324/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
-180            android:value="@integer/google_play_services_version" />
-180-->[com.google.android.gms:play-services-basement:18.4.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/cb38f60cb445c6fd20ead385cd9d2324/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
-181
-182        <provider
-182-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-183            android:name="androidx.startup.InitializationProvider"
-183-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
-184            android:authorities="com.example.remotecontrol.androidx-startup"
-184-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
-185            android:exported="false" >
-185-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
-186            <meta-data
-186-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-187                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-187-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
-188                android:value="androidx.startup" />
-188-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
-189            <meta-data
-189-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6fd0c5b664ce0e4093bdbd312f95dddb/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-190                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-190-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6fd0c5b664ce0e4093bdbd312f95dddb/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-191                android:value="androidx.startup" />
-191-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6fd0c5b664ce0e4093bdbd312f95dddb/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-192            <meta-data
-192-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
-193                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-193-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
-194                android:value="androidx.startup" />
-194-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
-195        </provider>
-196
-197        <receiver
-197-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
-198            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-198-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
-199            android:directBootAware="false"
-199-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
-200            android:enabled="true"
-200-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
-201            android:exported="true"
-201-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
-202            android:permission="android.permission.DUMP" >
-202-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
-203            <intent-filter>
-203-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
-204                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-204-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
-204-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
-205            </intent-filter>
-206            <intent-filter>
-206-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
-207                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-207-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
-207-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
-208            </intent-filter>
-209            <intent-filter>
-209-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
-210                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-210-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
-210-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
-211            </intent-filter>
-212            <intent-filter>
-212-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
-213                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-213-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
-213-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
-214            </intent-filter>
-215        </receiver>
-216    </application>
-217
-218</manifest>
+141            android:foregroundServiceType="specialUse" />
+141-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:104:13-55
+142
+143        <receiver
+143-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:106:9-115:20
+144            android:name="com.example.remotecontrol.BatteryAlertReceiver"
+144-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:106:19-55
+145            android:enabled="true"
+145-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:107:13-35
+146            android:exported="false" >
+146-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:107:36-60
+147            <intent-filter>
+147-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:108:13-114:29
+148                <action android:name="android.intent.action.BATTERY_LOW" />
+148-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:109:17-75
+148-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:109:25-73
+149                <action android:name="android.intent.action.BATTERY_OKAY" />
+149-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:110:17-76
+149-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:110:25-74
+150                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+150-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:111:17-86
+150-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:111:25-84
+151                <action android:name="com.example.remotecontrol.BATTERY_FULL" />
+151-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:112:17-80
+151-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:112:25-78
+152                <action android:name="com.example.remotecontrol.BATTERY_LOW_CUSTOM" />
+152-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:113:17-86
+152-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:113:25-84
+153            </intent-filter>
+154        </receiver>
+155
+156        <service
+156-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:9-100
+157            android:name="com.example.remotecontrol.LocationService"
+157-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:18-49
+158            android:enabled="true"
+158-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:50-72
+159            android:exported="false" />
+159-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:117:73-97
+160        <service
+160-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:118:9-98
+161            android:name="com.example.remotecontrol.CameraService"
+161-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:118:18-47
+162            android:enabled="true"
+162-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:118:48-70
+163            android:exported="false" />
+163-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:118:71-95
+164        <service
+164-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:119:9-123:63
+165            android:name="com.example.remotecontrol.ScreenshotService"
+165-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:120:13-46
+166            android:enabled="true"
+166-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:121:13-35
+167            android:exported="false"
+167-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:122:13-37
+168            android:foregroundServiceType="mediaProjection" />
+168-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:123:13-60
+169        <service
+169-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:125:9-103
+170            android:name="com.example.remotecontrol.AudioRecordService"
+170-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:125:18-52
+171            android:enabled="true"
+171-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:125:53-75
+172            android:exported="false" />
+172-->/Users/davlatarslonov/Documents/programs/RemoteControl/app/src/main/AndroidManifest.xml:125:76-100
+173
+174        <activity
+174-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+175            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+175-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+176            android:exported="false"
+176-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+177            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+177-->[com.google.android.gms:play-services-base:18.5.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/08f5a84f29a2a3f16d47220b733c16db/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+178
+179        <meta-data
+179-->[com.google.android.gms:play-services-basement:18.4.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/cb38f60cb445c6fd20ead385cd9d2324/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+180            android:name="com.google.android.gms.version"
+180-->[com.google.android.gms:play-services-basement:18.4.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/cb38f60cb445c6fd20ead385cd9d2324/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+181            android:value="@integer/google_play_services_version" />
+181-->[com.google.android.gms:play-services-basement:18.4.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/cb38f60cb445c6fd20ead385cd9d2324/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+182
+183        <provider
+183-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+184            android:name="androidx.startup.InitializationProvider"
+184-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
+185            android:authorities="com.example.remotecontrol.androidx-startup"
+185-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
+186            android:exported="false" >
+186-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
+187            <meta-data
+187-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+188                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+188-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+189                android:value="androidx.startup" />
+189-->[androidx.emoji2:emoji2:1.3.0] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/749a57c8d013355fa426ff6d7c7ca185/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+190            <meta-data
+190-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6fd0c5b664ce0e4093bdbd312f95dddb/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+191                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+191-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6fd0c5b664ce0e4093bdbd312f95dddb/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+192                android:value="androidx.startup" />
+192-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/6fd0c5b664ce0e4093bdbd312f95dddb/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+193            <meta-data
+193-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+194                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+194-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+195                android:value="androidx.startup" />
+195-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+196        </provider>
+197
+198        <receiver
+198-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+199            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+199-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+200            android:directBootAware="false"
+200-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+201            android:enabled="true"
+201-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+202            android:exported="true"
+202-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+203            android:permission="android.permission.DUMP" >
+203-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+204            <intent-filter>
+204-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+205                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+205-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+205-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+206            </intent-filter>
+207            <intent-filter>
+207-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+208                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+208-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+208-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+209            </intent-filter>
+210            <intent-filter>
+210-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+211                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+211-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+211-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+212            </intent-filter>
+213            <intent-filter>
+213-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+214                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+214-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+214-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/davlatarslonov/.gradle/caches/8.11.1/transforms/8b9d13ab60d88f943ac9f0de9811cb6d/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+215            </intent-filter>
+216        </receiver>
+217    </application>
+218
+219</manifest>
